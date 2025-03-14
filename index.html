@@ -63,7 +63,7 @@
             align-items: center;
         }
     </style>
-  <script>
+ <script>
    var texts = {
     es: { 
         title: "Casa África", 
@@ -222,6 +222,7 @@
     }
 };
 
+
 function changeLanguage() {
     var lang = document.getElementById("language-selector").value;
 
@@ -328,7 +329,7 @@ function changeLanguage() {
 	  document.getElementById("quesos-gazul").innerHTML = texts[lang].quesosGazul + 
         ' <a href="https://maps.app.goo.gl/PxccoyvKoytB1zKr9" target="_blank">' +
         '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
-    document.getElementById("quesos-gazul-desc").innerText = texts[lang].ventaCaracenaDesc;
+    document.getElementById("quesos-gazul-desc").innerText = texts[lang].quesosGazulDesc;
 }
 
 function showPage(pageId) {
@@ -467,12 +468,12 @@ function showPage(pageId) {
         <p id="horno-de-luna-desc">Pastelería y panadería. Trabaja los productos tradicionales de Alcalá</p>
     </div>
     <div>
-        <h3 id="venta-patríte">Venta Patríte 
+        <h3 id="venta-patrite">Venta Patríte 
             <a href="https://maps.app.goo.gl/u88bbUMtPhkVpinf8" target="_blank">
                 <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
             </a>
         </h3>
-        <p id="venta-patríte-desc">Venta típica para degustar los platos típicos Alcalaínos en un entorno natural privilegiado</p>
+        <p id="venta-patrite-desc">Venta típica para degustar los platos típicos Alcalaínos en un entorno natural privilegiado</p>
     </div>
     <div>
         <h3 id="venta-caracena">Venta Caracena 
