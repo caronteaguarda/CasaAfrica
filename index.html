@@ -5,68 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa África</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-        }
-        .background {
-            background-image: url('https://github.com/caronteaguarda/CasaAfrica/blob/main/WhatsApp%20Image%202025-02-28%20at%2019.23.50.jpeg?raw=true');
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            color: white;
-            overflow: auto;
-        }
-        .button {
-            display: block;
-            width: 200px;
-            margin: 10px auto;
-            padding: 10px;
-            background-color: transparent;
-            color: white;
-            text-decoration: none;
-            border: 2px solid white;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: white;
-            color: black;
-        }
-        .map-icon {
-            width: 20px;
-            height: 20px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
+       body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    color: black; /* Texto en negro */
+}
+
+.background {
+    background-image: url('https://github.com/caronteaguarda/CasaAfrica/blob/main/afrialcalaSuave3.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: black; /* Asegura que el texto sea negro */
+    overflow: auto;
+}
+#welcome-text {
+    font-size: 18px;
+    text-align: center;
+    max-width: 80%;
+    margin: 10px auto;
+}
+.button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: transparent;
+    color: black; /* Texto en negro */
+    text-decoration: none;
+    border: 2px solid black; /* Contorno en negro */
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: black;
+    color: white; /* Cambia el color del texto a blanco al pasar el mouse */
+}
+
+.map-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 .small-image {
-            width: 50px;  /* Tamaño de la imagen */
-            height: auto; /* Mantiene la proporción de la imagen */
-            margin-left: 10px; /* Espacio entre la imagen y el texto */
-            border: 2px solid #ccc; /* Borde alrededor de la imagen */
-            padding: 5px; /* Espaciado dentro del borde */
-            border-radius: 5px; /* Bordes redondeados */
-        }
-        .page {
-            display: none;
-        }
-        .active {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    width: 50px;  
+    height: auto; 
+    margin-left: 10px; 
+    border: 2px solid black; /* Borde en negro */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.page {
+    display: none;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
     </style>
  <script>
    var texts = {
     es: { 
         title: "Casa África", 
+	welcome: "Bienvenidos a la casa de África. Esta es una pequeña guía para que os podáis manejar en la casa y en el pueblo. Esperamos que disfrutéis de la vivienda, del entorno y de 	sus habitantes. Sobre cualquier duda podéis contactar con nosotros. Saludos y buena estancia!!",
+        
         btn1: "Lugares de interés", 
         btn2: "Comer y comprar", 
         btn3: "Rutas guiadas",
@@ -79,7 +95,7 @@
         castillo: "Castillo",
         castilloDesc: "El antiguo castillo de Alcalá...",
         barMoreno: "Bar Los Moreno",
-        barMorenoDesc: "Un buen lugar para tapear",
+        barMorenoDesc: "Un buen lugar para tapear. Calidad y cantidad a un precio insuperable. Buena atención de Julio.",
         barRealm: "Bar Real Madrid",
         barRealmDesc: "Tapas generosas a buen precio",
         barLaReinventa: "Bar La Reinventá",
@@ -108,15 +124,17 @@
         centroMedicoDesc: "Centro Médico",
 	laCasaTitle: "La Casa",
         casaInfo: "Salon- Cocina", // Texto descriptivo
-        casaInfoDesc: "Desconexión calentador de agua: par aconectar o desconectar, al lado del calentador hay un interruptor.",
+        casaInfoDesc: "El calentador se ecuentra dentro de uno de los armarios de la cocina. Desconexión calentador de agua: para conectar o desconectar, al lado del calentador hay un interruptor.",
 	segundaPlantaTitulo: "Segunda planta-Lavadora.",
-        segundaPlantaDesc: "La lavadora se halla dentro del armario empotrado.",
+        segundaPlantaDesc: "La lavadora se halla dentro del armario empotrado. Al lado de la lavadora se ecuentra una sombrilla.",
 	primeraPlantaTitulo: "Primera planta-Aseo.",
 	primeraPlantaDesc: "Para el funcionamiento de la electricidad, incluidos enchufes, pulsar el interruptor de afuera."    
      
     },
     en: { 
         title: "Casa Africa", 
+	welcome: "Welcome to Casa Africa. This is a small guide to help you navigate the house and the village. We hope you enjoy the home, the surroundings, and the people. If you have 	any questions, feel free to contact us. Greetings and have a great stay!",
+        
         btn1: "Places of Interest", 
         btn2: "Eat and shop", 
         btn3: "Guided Tours", 
@@ -129,7 +147,7 @@
         castillo: "Castle",
         castilloDesc: "The ancient castle of Alcalá...",
         barMoreno: "Bar Los Moreno",
-        barMorenoDesc: "A great place for tapas",
+        barMorenoDesc: "A good place for tapas. Quality and quantity at an unbeatable price. Good attention from Julio.",
         barRealm: "Bar Real Madrid",
         barRealmDesc: "Generous tapas at a good price",
         barLaReinventa: "Bar La Reinventá",
@@ -158,9 +176,9 @@
         centroMedicoDesc: "Medical Center",
  	laCasaTitle: "The House",
         casaInfo: "Ground floor: Living room-kitchen", // Texto descriptivo
-        casaInfoDesc: "Water heater disconnection: to connect or disconnect, there is a switch next to the heater.",
+        casaInfoDesc: "The water heater is located inside one of the kitchen cabinets. Water heater disconnection: to connect or disconnect, next to the heater there is a switch.",
 	segundaPlantaTitulo: "Second floor-Washing machine.",
-        segundaPlantaDesc: "The washing machine is located inside the built-in wardrobe.",
+        segundaPlantaDesc: "The washing machine is located inside the built-in wardrobe. Next to the washing machine there is an umbrella.",
 	primeraPlantaTitulo: "First floor-Toilet",
 	primeraPlantaDesc: "To operate electricity, including plugs, press the switch outside." 
 	
@@ -170,8 +188,10 @@
     },
     fr: { 
         title: "Maison Afrique", 
+	welcome: "Bienvenue à la Maison Afrique. Ce petit guide vous aidera à vous repérer dans la maison et le village. Nous espérons que vous apprécierez la maison, l'environnement et ses habitants. Pour toute question, n'hésitez pas à nous contacter. Salutations et bon séjour !!",
+        
         btn1: "Lieux d'intérêt", 
-        btn2: Manger et acheter", 
+        btn2: "Manger et acheter", 
         btn3: "Visites guidées",
 	btn4: "La maison",  
         back: "Retour à l'accueil",
@@ -182,7 +202,7 @@
         castillo: "Château",
         castilloDesc: "L'ancien château d'Alcalá...",
         barMoreno: "Bar Los Moreno",
-        barMorenoDesc: "Un excellent endroit pour des tapas",
+        barMorenoDesc: "Un bon endroit pour les tapas. Qualité et quantité à un prix imbattable. Bonne attention de Julio.",
         barRealm: "Bar Real Madrid",
         barRealmDesc: "Tapas généreuses à bon prix",
         barLaReinventa: "Bar La Reinventá",
@@ -211,9 +231,9 @@
         centroMedicoDesc: "Centre médical",
   	laCasaTitle: "La Maison",
         casaInfo: "Rez-de-chaussée : Séjour-cuisine", // Texto descriptivo
-        casaInfoDesc: "Déconnexion du chauffe-eau : pour brancher ou débrancher, il y a un interrupteur à côté du chauffe-eau.",
+        casaInfoDesc: "Le chauffe-eau est situé à l'intérieur d'une des armoires de cuisine. Déconnexion du chauffe-eau : pour brancher ou débrancher, à côté du chauffe-eau se trouve un interrupteur.",
 	segundaPlantaTitulo: "Deuxième étage-Machine à laver.",
-        segundaPlantaDesc: "Le lave-linge est situé à l'intérieur de l'armoire intégrée.",
+        segundaPlantaDesc: "Le lave-linge est situé à l'intérieur de l'armoire intégrée. A côté de la machine à laver il y a un parapluie",
 	primeraPlantaTitulo: "Premier étage-Toilette",
 	primeraPlantaDesc: "Pour faire fonctionner l'électricité, y compris les prises, appuyez sur l'interrupteur à l'extérieur." 
 	
@@ -228,6 +248,7 @@ function changeLanguage() {
 
     // Actualiza los textos de la página de inicio
     document.getElementById("title").innerText = texts[lang].title;
+    document.getElementById("welcome-text").innerText = texts[lang].welcome; // Actualiza el texto de bienvenida 
     document.getElementById("btn1").innerText = texts[lang].btn1;
     document.getElementById("btn2").innerText = texts[lang].btn2;
     document.getElementById("btn4").innerText = texts[lang].btn4;
@@ -342,13 +363,18 @@ function showPage(pageId) {
 <body>
     <div id="home" class="background page active">
         <h1 id="title">Casa África</h1>
+ <p id="welcome-text">
+        Bienvenidos a la casa de África. Esta es una pequeña guía para que os podáis manejar en la casa y en el pueblo. 
+        Esperamos que disfrutéis de la vivienda, del entorno y de sus habitantes. Sobre cualquier duda podéis contactar con nosotros. 
+        Saludos y buena estancia!!
+    </p>
         <select id="language-selector" onchange="changeLanguage()">
             <option value="es">Español</option>
             <option value="en">English</option>
             <option value="fr">Français</option>
         </select>
         <button id="btn1" class="button" onclick="showPage('lugares')">Lugares de interés</button>
-        <button id="btn2" class="button" onclick="showPage('tapeo')">Comer y comprar</button>
+        <button id="btn2" class="button" onclick="showPage('tapeo')">Tapear y comprar</button>
 	 <button id="btn4" class="button" onclick="showPage('la-casa')">La Casa</button>
         <a id="btn3" class="button" href="https://www.fabularural.com/" target="_blank">Rutas guiadas</a>
     </div>
@@ -426,14 +452,14 @@ function showPage(pageId) {
 
 
 <div id="tapeo" class="background page">
-    <h1 id="tapeo-title">Comer y comprar</h1>
+    <h1 id="tapeo-title">Dónde tapear</h1>
     <div>
         <h3 id="bar-moreno">Bar 'Los Morenos' 
             <a href="https://maps.app.goo.gl/zoK7rgy5vKJ6hZmD6" target="_blank">
                 <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
             </a>
         </h3>
-        <p id="bar-moreno-desc">Un buen lugar para tapear</p>
+        <p id="bar-moreno-desc">Un buen lugar para tapear. Calidad y cantidad a un precio insuperable. Buena atención de Julio.</p>
     </div>
     <div>
         <h3 id="bar-realm">Bar Peña Real Madrid 
@@ -503,9 +529,9 @@ function showPage(pageId) {
     <div>
         <h3 id="casa-info">Salón- Cocina
             <!-- Imagen al lado del título -->
-            <img class="small-image" src="https://cdn.pixabay.com/photo/2025/02/05/20/17/family-9385616_1280.jpg" alt="Imagen de Casa África">
+            
         </h3>
-        <p id="casa-info-desc">Desconexión calentador de agua: para conectar o desconectar, al lado del calentador hay un interruptor.</p>
+        <p id="casa-info-desc">El calentador se ecuentra dentro de uno de los armarios de la cocina. Desconexión calentador de agua: para conectar o desconectar, al lado del calentador hay un interruptor.</p>
     </div>
 
     <!-- Segundo grupo de información -->
@@ -517,7 +543,7 @@ function showPage(pageId) {
     <!-- Tercer grupo de información -->
     <div>
         <h3 id="segunda-planta-titulo">Segunda planta-Lavadora</h3>
-        <p id="segunda-planta-desc">La lavadora se halla dentro del armario empotrado.</p>
+        <p id="segunda-planta-desc">La lavadora se halla dentro del armario empotrado. Al lado de la lavadora se ecuentra una sombrilla</p>
     </div>
 
     <button class="button back-btn" onclick="showPage('home')">Volver al inicio</button>
