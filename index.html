@@ -112,6 +112,8 @@
         quesosGazulDesc: "Quesería de venta al público con excelentes productos. Precio razonable",
         conventoSantoDomingo: "Convento de Santo Domingo",
         conventoSantoDomingoDesc: "Convento fundado en el S XVI. Actualmente es un centro cultural.",
+	paseoDeLaPlaya:"Paseo de la Playa",
+	paseoDeLaPlayaDesc: "Es el lugar donde se dan cita todas las gentes del pueblo.Habitualmente muy concurrido. Hay varios bares y tiendas.",
         puenteRomano: "Puente romano",
         puenteRomanoDesc: "Restos del antiguo puente romano",
         fuenteSala: "Fuente 'La salá' y depósitos Romanos",
@@ -164,6 +166,8 @@
         quesosGazulDesc: "Shop selling cheese and other typical products",
         conventoSantoDomingo: "Convento de Santo Domingo",
         conventoSantoDomingoDesc: "Convent founded in the 16th century. Currently it is a cultural center.",
+	paseoDeLaPlaya:"Paseo de la Playa",
+	paseoDeLaPlayaDesc: "It is the place where all the people of the town meet. It is usually very busy. There are several bars and shops.",
         puenteRomano: "Roman Bridge",
         puenteRomanoDesc: "Remains of the ancient Roman bridge",
         fuenteSala: "Fountain 'La salá' and Roman Tanks",
@@ -219,6 +223,9 @@
         quesosGazulDesc: "Magasin de vente de fromages et autres produits typiques",
         conventoSantoDomingo: "Convento de Santo Domingo",
         conventoSantoDomingoDesc: "Convent fondé au XVIe siècle. Actuellement, c'est un centre culturel.",
+	paseoDeLaPlaya:"Paseo de la Playa",
+	paseoDeLaPlayaDesc: "C'est le lieu de rencontre de tous les habitants de la ville. Il est généralement très fréquenté. Il y a plusieurs bars et magasins",
+
         puenteRomano: "Pont romain",
         puenteRomanoDesc: "Vestiges de l'ancien pont romain",
         fuenteSala: "Fontaine 'La salá' et réservoirs romains",
@@ -285,7 +292,12 @@ function changeLanguage() {
         '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
     document.getElementById("convento-santo-domingo-desc").innerText = texts[lang].conventoSantoDomingoDesc;
 
-    document.getElementById("puente-romano").innerHTML = texts[lang].puenteRomano + 
+ document.getElementById("paseo-de-la-playa").innerHTML = texts[lang].paseoDeLaPlaya + 
+        ' <a href="https://maps.app.goo.gl/QZYeyYBG1RsNUUtWA" target="_blank">' +
+        '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
+    document.getElementById("paseo-de-la-playa-desc").innerText = texts[lang].paseoDeLaPlayaDesc;
+   
+ document.getElementById("puente-romano").innerHTML = texts[lang].puenteRomano + 
         ' <a href="https://maps.app.goo.gl/sjspQes4caG8cUS89" target="_blank">' +
         '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
     document.getElementById("puente-romano-desc").innerText = texts[lang].puenteRomanoDesc;
@@ -405,6 +417,14 @@ function showPage(pageId) {
             </a>
         </h3>
         <p id="convento-santo-domingo-desc">Convento fundado en el S XVI. Actualmente es un centro cultural.</p>
+    </div>
+<div>
+        <h3 id="paseo-de-la-playa"> Paseo de la Playa
+            <a href="https://maps.app.goo.gl/QZYeyYBG1RsNUUtWA" target="_blank">
+                <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
+            </a>
+        </h3>
+        <p id="paseo-de-la-playa-desc">Es el lugar donde se dan cita todas las gentes del pueblo.Habitualmente muy concurrido. Hay varios bares y tiendas.</p>
     </div>
     <div>
         <h3 id="puente-romano"> Puente Romano
