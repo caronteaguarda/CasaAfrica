@@ -92,6 +92,8 @@
         ventaPatriteDesc: "Venta típica para degustar los platos típicos Alcalaínos en un entorno natural privilegiado",
         ventaCaracena: "Venta Caracena",
         ventaCaracenaDesc: "Venta con comida casera a un precio muy razonable",
+	quesosGazul: "Quesos Gazul",
+        quesosGazulDesc: "Tienda de venta de quesos y otros productos típicos",
         conventoSantoDomingo: "Convento de Santo Domingo",
         conventoSantoDomingoDesc: "Convento fundado en el S XVI. Actualmente es un centro cultural.",
         puenteRomano: "Puente romano",
@@ -140,6 +142,8 @@
         ventaPatriteDesc: "Typical sale to taste typical Alcalaínos dishes in a privileged natural environment",
         ventaCaracena: "Venta Caracena",
         ventaCaracenaDesc: "Sale with homemade food at a very reasonable price",
+	quesosGazul: "Quesos Gazul",
+        quesosGazulDesc: "Shop selling cheese and other typical products",
         conventoSantoDomingo: "Convento de Santo Domingo",
         conventoSantoDomingoDesc: "Convent founded in the 16th century. Currently it is a cultural center.",
         puenteRomano: "Roman Bridge",
@@ -191,6 +195,8 @@
         ventaPatriteDesc: "Vente typique pour déguster des plats typiques d'Alcalaínos dans un environnement naturel privilégié",
         ventaCaracena: "Venta Caracena",
         ventaCaracenaDesc: "Vente avec des plats faits maison à un prix très raisonnable",
+	quesosGazul: "Quesos Gazul",
+        quesosGazulDesc: "Magasin de vente de fromages et autres produits typiques",
         conventoSantoDomingo: "Convento de Santo Domingo",
         conventoSantoDomingoDesc: "Convent fondé au XVIe siècle. Actuellement, c'est un centre culturel.",
         puenteRomano: "Pont romain",
@@ -316,6 +322,11 @@ function changeLanguage() {
 
     document.getElementById("venta-caracena").innerHTML = texts[lang].ventaCaracena + 
         ' <a href="https://maps.app.goo.gl/VLdUwMGtXSGXzcQE6" target="_blank">' +
+        '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
+    document.getElementById("venta-caracena-desc").innerText = texts[lang].ventaCaracenaDesc;
+
+	  document.getElementById("quesos-gazul").innerHTML = texts[lang].quesosGazul + 
+        ' <a href="https://maps.app.goo.gl/PxccoyvKoytB1zKr9" target="_blank">' +
         '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
     document.getElementById("venta-caracena-desc").innerText = texts[lang].ventaCaracenaDesc;
 }
@@ -470,6 +481,14 @@ function showPage(pageId) {
             </a>
         </h3>
         <p id="venta-caracena-desc">Venta con comida casera a un precio muy razonable</p>
+    </div>
+	 <div>
+        <h3 id="quesos-gazul">Quesos Gazul 
+            <a href="https://maps.app.goo.gl/PxccoyvKoytB1zKr9" target="_blank">
+                <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
+            </a>
+        </h3>
+        <p id="quesos-gazul-desc">Quesería de venta al público con excelentes productos. Precio razonable</p>
     </div>
     <button class="button" onclick="showPage('home')">Volver al inicio</button>
 </div>
