@@ -86,7 +86,8 @@
         btn1: "Lugares de interés", 
         btn2: "Comer y comprar", 
         btn3: "Rutas guiadas",
-        btn4: "La casa",  
+        btn4: "La casa", 
+	btn5: "Rutas simples", 
         back: "Volver al inicio",
         lugaresTitle: "Lugares de Interés en Alcalá de los Gazules",
         tapeoTitle: "Dónde tapear en Alcalá de los Gazules",
@@ -141,6 +142,7 @@
         btn2: "Eat and shop", 
         btn3: "Guided Tours", 
         btn4: "The house", 
+	btn5: "Simple routes.", 
         back: "Back to Home",
         lugaresTitle: "Places of Interest in Alcalá de los Gazules",
         tapeoTitle: "Where to eat in Alcalá de los Gazules",
@@ -197,7 +199,8 @@
         btn1: "Lieux d'intérêt", 
         btn2: "Manger et acheter", 
         btn3: "Visites guidées",
-	btn4: "La maison",  
+	btn4: "La maison", 
+	btn5: "Itinéraires simples.",   
         back: "Retour à l'accueil",
         lugaresTitle: "Lieux d'intérêt à Alcalá de los Gazules",
         tapeoTitle: "Où manger à Alcalá de los Gazules",
@@ -258,7 +261,9 @@ function changeLanguage() {
     document.getElementById("welcome-text").innerText = texts[lang].welcome; // Actualiza el texto de bienvenida 
     document.getElementById("btn1").innerText = texts[lang].btn1;
     document.getElementById("btn2").innerText = texts[lang].btn2;
+    document.getElementById("btn3").innerText = texts[lang].btn3;
     document.getElementById("btn4").innerText = texts[lang].btn4;
+    document.getElementById("btn5").innerText = texts[lang].btn5;
     document.querySelectorAll(".back-btn").forEach(btn => btn.innerText = texts[lang].back);
 
  // Actualiza los textos en la página "La Casa"
@@ -387,7 +392,12 @@ function showPage(pageId) {
         </select>
         <button id="btn1" class="button" onclick="showPage('lugares')">Lugares de interés</button>
         <button id="btn2" class="button" onclick="showPage('tapeo')">Tapear y comprar</button>
-	 <button id="btn4" class="button" onclick="showPage('la-casa')">La Casa</button>
+	<button id="btn4" class="button" onclick="showPage('la-casa')">La Casa</button>
+ 	 <a id="btn5" class="button" 
+           href="https://docs.google.com/viewer?url=https://github.com/caronteaguarda/CasaAfrica/raw/00018783c108a54c43018c4ca183dacfeda16ef6/Rutas%20Alcal%C3%A1%20traducc.pdf" 
+           target="_blank">
+            Rutas sencillas
+        </a>
         <a id="btn3" class="button" href="https://www.fabularural.com/" target="_blank">Rutas guiadas</a>
     </div>
 
