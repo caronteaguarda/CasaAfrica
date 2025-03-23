@@ -143,7 +143,11 @@
 	segundaPlantaTitulo: "Segunda planta-Lavadora.",
         segundaPlantaDesc: "La lavadora se halla dentro del armario empotrado. Al lado de la lavadora se ecuentra una sombrilla.",
 	primeraPlantaTitulo: "Primera planta-Aseo.",
-	primeraPlantaDesc: "Para el funcionamiento de la electricidad, incluidos enchufes, pulsar el interruptor de afuera."    
+	primeraPlantaDesc: "Para el funcionamiento de la electricidad, incluidos enchufes, pulsar el interruptor de afuera.",
+    	tiendaDesavio1: "Tienda de alimentación",
+        tiendaDesavio1Desc: "Pequeña tienda de alimentación que abre todos los días (incluídos los domingos).",
+	tiendaDesavio2: "Tienda de alimentación 2",
+        tiendaDesavio2Desc: "Otra pequeña tienda de alimentación que abre todos los días (incluídos los domingos)."
      
     },
     en: { 
@@ -198,7 +202,11 @@
 	segundaPlantaTitulo: "Second floor-Washing machine.",
         segundaPlantaDesc: "The washing machine is located inside the built-in wardrobe. Next to the washing machine there is an umbrella.",
 	primeraPlantaTitulo: "First floor-Toilet",
-	primeraPlantaDesc: "To operate electricity, including plugs, press the switch outside." 
+	primeraPlantaDesc: "To operate electricity, including plugs, press the switch outside.",
+	tiendaDesavio1: "Food store",
+        tiendaDesavio1Desc: "Small grocery store that opens every day (including Sundays).",
+	tiendaDesavio2: "Food store 2",
+        tiendaDesavio2Desc: "Another small food store that opens every day (including Sundays)."
 	
 
 
@@ -257,7 +265,11 @@
 	segundaPlantaTitulo: "Deuxième étage-Machine à laver.",
         segundaPlantaDesc: "Le lave-linge est situé à l'intérieur de l'armoire intégrée. A côté de la machine à laver il y a un parapluie",
 	primeraPlantaTitulo: "Premier étage-Toilette",
-	primeraPlantaDesc: "Pour faire fonctionner l'électricité, y compris les prises, appuyez sur l'interrupteur à l'extérieur." 
+	primeraPlantaDesc: "Pour faire fonctionner l'électricité, y compris les prises, appuyez sur l'interrupteur à l'extérieur.",
+	tiendaDesavio1: "Magasin d'alimentation",
+        tiendaDesavio1Desc: "Petite épicerie ouverte tous les jours (y compris le dimanche).",
+	tiendaDesavio2: "Magasin d'alimentation 2",
+        tiendaDesavio2Desc: "Encore un petit magasin d'alimentation qui ouvre tous les jours (y compris le dimanche)." 
 	
 
 	
@@ -380,6 +392,17 @@ function changeLanguage() {
         ' <a href="https://maps.app.goo.gl/PxccoyvKoytB1zKr9" target="_blank">' +
         '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
     document.getElementById("quesos-gazul-desc").innerText = texts[lang].quesosGazulDesc;
+
+  document.getElementById("tienda-desavio1").innerHTML = texts[lang].tiendaDesavio1 + 
+        ' <a href="https://maps.app.goo.gl/7FK5drCLRnRGnAu5A" target="_blank">' +
+        '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
+    document.getElementById("tienda-desavio1-desc").innerText = texts[lang].tiendaDesavio1Desc;
+
+
+  document.getElementById("tienda-desavio2").innerHTML = texts[lang].tiendaDesavio2 + 
+        ' <a href="https://maps.app.goo.gl/sLTi7uW4JoJHjU7u7" target="_blank">' +
+        '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
+    document.getElementById("tienda-desavio2-desc").innerText = texts[lang].tiendaDesavio2Desc;
 }
 
 function showPage(pageId) {
@@ -392,26 +415,31 @@ function showPage(pageId) {
 <body>
     <div id="home" class="background page active">
         <h1 id="title">Casa África</h1>
- <p id="welcome-text">
-        Bienvenidos a la casa de África. Esta es una pequeña guía para que os podáis manejar en la casa y en el pueblo. 
-        Esperamos que disfrutéis de la vivienda, del entorno y de sus habitantes. Sobre cualquier duda podéis contactar con nosotros. 
-        Saludos y buena estancia!!
-    </p>
+
+        <!-- Selector de idioma entre el título y el primer párrafo -->
         <select id="language-selector" onchange="changeLanguage()">
             <option value="es">Español</option>
             <option value="en">English</option>
             <option value="fr">Français</option>
         </select>
+
+        <p id="welcome-text">
+            Bienvenidos a la casa de África. Esta es una pequeña guía para que os podáis manejar en la casa y en el pueblo. 
+            Esperamos que disfrutéis de la vivienda, del entorno y de sus habitantes. Sobre cualquier duda podéis contactar con nosotros. 
+            Saludos y buena estancia!!
+        </p>
+
         <button id="btn1" class="button" onclick="showPage('lugares')">Lugares de interés</button>
         <button id="btn2" class="button" onclick="showPage('tapeo')">Tapear y comprar</button>
-	<button id="btn4" class="button" onclick="showPage('la-casa')">La Casa</button>
- 	 <a id="btn5" class="button" 
+        <button id="btn4" class="button" onclick="showPage('la-casa')">La Casa</button>
+        <a id="btn5" class="button" 
            href="https://docs.google.com/viewer?url=https://github.com/caronteaguarda/CasaAfrica/raw/79009e5a255a1451a96e934eb24410fe2a836c1e/RutaAlcTraduc.pdf" 
            target="_blank">
             Rutas sencillas
         </a>
         <a id="btn3" class="button" href="https://www.fabularural.com/" target="_blank">Rutas guiadas</a>
     </div>
+
 
 
 <div id="lugares" class="background page">
@@ -558,6 +586,24 @@ function showPage(pageId) {
             </a>
         </h3>
         <p id="quesos-gazul-desc">Quesería de venta al público con excelentes productos. Precio razonable</p>
+    </div>
+
+<div>
+        <h3 id="tienda-desavio1">Tienda Desavio 1 
+            <a href="https://maps.app.goo.gl/7FK5drCLRnRGnAu5A" target="_blank">
+                <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
+            </a>
+        </h3>
+        <p id="tienda-desavio1-desc">Pequeña tienda de alimentación que abre todos los días (incluídos los domingos).</p>
+    </div>
+
+<div>
+        <h3 id="tienda-desavio2">Tienda Desavio 2 
+            <a href="https://maps.app.goo.gl/sLTi7uW4JoJHjU7u7" target="_blank">
+                <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
+            </a>
+        </h3>
+        <p id="tienda-desavio2-desc">Otra pequeña tienda de alimentación que abre todos los días (incluídos los domingos).</p>
     </div>
     <button class="button" onclick="showPage('home')">Volver al inicio</button>
 </div>
