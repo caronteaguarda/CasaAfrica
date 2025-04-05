@@ -147,7 +147,9 @@
     	tiendaDesavio1: "Tienda de alimentación",
         tiendaDesavio1Desc: "Pequeña tienda de alimentación que abre todos los días (incluídos los domingos).",
 	tiendaDesavio2: "Tienda de alimentación 2",
-        tiendaDesavio2Desc: "Otra pequeña tienda de alimentación que abre todos los días (incluídos los domingos)."
+        tiendaDesavio2Desc: "Otra pequeña tienda de alimentación que abre todos los días (incluídos los domingos).",
+        lugaresAparcamiento: "Lugares de aparcamiento",
+        lugaresAparcamientoDesc: "En ocasiones es difícil aparcar cerca de la casa. Éstos son algunos espacios donde aparcar"
      
     },
     en: { 
@@ -206,7 +208,11 @@
 	tiendaDesavio1: "Food store",
         tiendaDesavio1Desc: "Small grocery store that opens every day (including Sundays).",
 	tiendaDesavio2: "Food store 2",
-        tiendaDesavio2Desc: "Another small food store that opens every day (including Sundays)."
+        tiendaDesavio2Desc: "Another small food store that opens every day (including Sundays).",
+        lugaresAparcamiento: "Parking spots",
+        lugaresAparcamientoDesc: "Sometimes it’s hard to park near the house. Here are some places where you can park"
+
+	
 	
 
 
@@ -269,7 +275,10 @@
 	tiendaDesavio1: "Magasin d'alimentation",
         tiendaDesavio1Desc: "Petite épicerie ouverte tous les jours (y compris le dimanche).",
 	tiendaDesavio2: "Magasin d'alimentation 2",
-        tiendaDesavio2Desc: "Encore un petit magasin d'alimentation qui ouvre tous les jours (y compris le dimanche)." 
+        tiendaDesavio2Desc: "Encore un petit magasin d'alimentation qui ouvre tous les jours (y compris le dimanche).",
+        lugaresAparcamiento: "Places de stationnement",
+lugaresAparcamientoDesc: "Il est parfois difficile de se garer près de la maison. Voici quelques endroits où se garer"
+
 	
 
 	
@@ -341,17 +350,26 @@ function changeLanguage() {
         '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
     document.getElementById("la-alameda-desc").innerText = texts[lang].laAlamedaDesc;
 
-    document.getElementById("guardia-civil").innerHTML = texts[lang].guardiaCivil + 
-        ' <a href="https://maps.app.goo.gl/zhiQgwFqPxCAogGf7" target="_blank">' +
-        '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
-    document.getElementById("guardia-civil-desc").innerText = texts[lang].guardiaCivilDesc;
+   document.getElementById("guardia-civil").innerHTML = texts[lang].guardiaCivil + 
+    ' <a href="https://maps.app.goo.gl/zhiQgwFqPxCAogGf7" target="_blank">' +
+    '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
+document.getElementById("guardia-civil-desc").innerText = texts[lang].guardiaCivilDesc;
 
-    document.getElementById("centro-medico").innerHTML = texts[lang].centroMedico + 
-        ' <a href="https://maps.app.goo.gl/zdoPtYDuGBjZFsjC6" target="_blank">' +
-        '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
-    document.getElementById("centro-medico-desc").innerText = texts[lang].centroMedicoDesc;
+document.getElementById("centro-medico").innerHTML = texts[lang].centroMedico + 
+    ' <a href="https://maps.app.goo.gl/zdoPtYDuGBjZFsjC6" target="_blank">' +
+    '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
+document.getElementById("centro-medico-desc").innerText = texts[lang].centroMedicoDesc;
 
-    // Actualiza los textos en la página de "Tapeo"
+document.getElementById("lugares-aparcamiento").innerHTML = texts[lang].lugaresAparcamiento + 
+    ' <a href="https://maps.app.goo.gl/uS2fn8PQgSJDHawi9" target="_blank">' +
+    '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>' +
+    ' <a href="https://maps.app.goo.gl/atvCqsDBLnypVXYa6" target="_blank">' +
+    '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>' +
+    ' <a href="https://maps.app.goo.gl/7UDojeuHZZsXchx37" target="_blank">' +
+    '<img class="map-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Mapa"></a>';
+document.getElementById("lugares-aparcamiento-desc").innerText = texts[lang].lugaresAparcamientoDesc;
+  
+  // Actualiza los textos en la página de "Tapeo"
     document.getElementById("tapeo-title").innerText = texts[lang].tapeoTitle;
     document.getElementById("bar-moreno").innerHTML = texts[lang].barMoreno + 
         ' <a href="https://maps.app.goo.gl/zoK7rgy5vKJ6hZmD6" target="_blank">' +
@@ -508,15 +526,39 @@ function showPage(pageId) {
         </h3>
         <p id="guardia-civil-desc">Guardia Civil.</p>
     </div>
-    <div>
-        <h3 id="centro-medico"> Centro Médico
-            <a href="https://maps.app.goo.gl/zdoPtYDuGBjZFsjC6" target="_blank">
-                <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
-            </a>
-        </h3>
-        <p id="centro-medico-desc">Centro Médico.</p>
-    </div>
+   <div>
+    <h3 id="centro-medico">Centro Médico
+        <a href="https://maps.app.goo.gl/zdoPtYDuGBjZFsjC6" target="_blank">
+            <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" 
+                 src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
+        </a>
+    </h3>
+    <p id="centro-medico-desc">Centro Médico.</p>
+</div>
+
+<div>
+    <h3 id="lugares-aparcamiento">Lugares de aparcamiento
+        <a href="https://maps.app.goo.gl/uS2fn8PQgSJDHawi9" target="_blank">
+            <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" 
+                 src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
+        </a>
+        <a href="https://maps.app.goo.gl/atvCqsDBLnypVXYa6" target="_blank">
+            <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" 
+                 src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
+        </a>
+        <a href="https://maps.app.goo.gl/7UDojeuHZZsXchx37" target="_blank">
+            <img class="map-icon" data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" 
+                 src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Mapa">
+        </a>
+    </h3>
+    <p id="lugares-aparcamiento-desc">
+        En ocasiones es difícil aparcar cerca de la casa. Éstos son algunos espacios donde aparcar.
+    </p>
+</div>
+
     <button class="button back-btn" onclick="showPage('home')">Volver al inicio</button>
+</div>
+
 </div>
 
 
@@ -612,6 +654,13 @@ function showPage(pageId) {
 <!-- Página "La Casa" -->
 <div id="la-casa" class="background page">
     <h1 id="la-casa-title">La Casa</h1>
+<a href="https://maps.app.goo.gl/dohBPrvtF5AcbbCH7" target="_blank">
+    <img class="map-icon" 
+         data-icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png" 
+         src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" 
+         alt="Mapa">
+</a>
+
     <p>Información sobre la Casa África...</p>
 
     <!-- Botón "Imag." que abre la imagen en visor (sin descargar) -->
